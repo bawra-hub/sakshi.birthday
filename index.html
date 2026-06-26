@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Sakshi Bhadana!</title>
+    <!-- Google Fonts for Elegant Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0b0b;
+            --card-bg: #141414;
+            --accent-color: #e5b09c; /* Rose Gold Glow */
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        /* Special Date Banner */
+        .date-banner {
+            background: linear-gradient(90deg, #141414, #2c1e1a, #141414);
+            color: var(--accent-color);
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #221815;
+            font-weight: 500;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #252525;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-color);
+        }
+
+        /* Hero Section */
+        header {
+            position: relative;
+            height: calc(100vh - 45px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: radial-gradient(circle at center, #161616 0%, var(--bg-color) 70%);
+            overflow: hidden;
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px);
+            background-size: 550px 550px;
+            opacity: 0.15;
+            animation: floating 20s linear infinite;
+        }
+
+        @keyframes floating {
+            from { background-position: 0 0; }
+            to { background-position: 550px 1100px; }
+        }
+
+        .hero-content {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            z-index: 2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            text-shadow: 0 0 20px rgba(229, 176, 156, 0.2);
+        }
+
+        .hero-title span {
+            font-style: italic;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 40px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            z-index: 2;
+        }
+        .scroll-down:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: var(--accent-color);
+            margin: 15px auto 0 auto;
+        }
+
+        /* Tribute Box */
+        .tribute-box {
+            background-color: var(--card-bg);
+            border: 1px solid #1f1f1f;
+            padding: 50px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        .tribute-box p {
+            font-size: 1.1rem;
+            color: #dcdcdc;
+            margin-bottom: 20px;
+        }
+        .tribute-tag {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-top: 30px;
+        }
+
+        .ai-poem {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            text-align: center;
+            color: #f7d6c8;
+            line-height: 1.8;
+            margin: 40px auto;
+            max-width: 600px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Cake Cutting Area */
+        .cake-area {
+            background-color: #101010;
+            border: 1px dashed #2c1e1a;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        .cake {
+            width: 160px;
+            height: 120px;
+            background: #221a17;
+            margin: 40px auto 0 auto;
+            position: relative;
+            border-radius: 10px 10px 0 0;
+            box-shadow: inset 0 15px 0 #3a2e29, 0 10px 20px rgba(0,0,0,0.4);
+            border-bottom: 6px solid var(--accent-color);
+            transition: transform 0.5s;
+        }
+        .cake.cut {
+            transform: scaleY(0.9) translateY(10px);
+        }
+        .cake::before {
+            content: '';
+            position: absolute;
+            top: 40px; left: 0;
+            width: 100%; height: 12px;
+            background: #e5b09c;
+        }
+        .candle {
+            width: 8px;
+            height: 35px;
+            background: #ffffff;
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .flame {
+            width: 12px;
+            height: 20px;
+            background: #ff9d00;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: absolute;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px #ff9d00;
+            animation: flicker 0.6s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { transform: translateX(-50%) scale(1); }
+            100% { transform: translateX(-50%) scale(1.1) skewX(2deg); }
+        }
+        .cake.cut .flame {
+            display: none;
+        }
+        .cake-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: rgba(229, 176, 156, 0.4);
+            top: 50px; left: 0;
+            display: none;
+        }
+        .cake.cut .cake-line {
+            display: block;
+        }
+        .action-btn {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--accent-color);
+            padding: 12px 30px;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 30px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .action-btn:hover {
+            background: var(--accent-color);
+            color: #000;
+        }
+
+        /* Wishes Grid Layout */
+        .wishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .wish-card {
+            background: linear-gradient(145deg, #141414, #0f0f0f);
+            border: 1px solid #1f1f1f;
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .wish-text {
+            color: #e0e0e0;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .wish-author {
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* Surprise Banner Overlay */
+        .surprise-container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 40px;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            animation: fadeIn 1s ease forwards;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #444;
+            font-size: 0.85rem;
+            border-top: 1px solid #141414;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 3rem; }
+            .section-title { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- CALENDAR TOP BANNER -->
+    <div class="date-banner">
+        13 December • A Very Special Day For My Sister
+    </div>
+
+    <!-- 1. HERO MAIN TITLE -->
+    <header>
+        <div class="stars"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Celebrating You</p>
+            <h1 class="hero-title">Happiest Birthday,<br><span>Sakshi Bhadana</span></h1>
+            <p style="color: var(--text-muted); letter-spacing: 1px;">To my wonderful sister and ultimate companion through life.</p>
+        </div>
+        <a href="#about" class="scroll-down">Scroll Deep</a>
+    </header>
+
+    <!-- 2. HEARTFELT TRIBUTE -->
+    <section id="about">
+        <h2 class="section-title">A Tribute To My Sister</h2>
+        <div class="tribute-box">
+            <p>"There are friends, there is family, and then there is a sister who becomes a permanent anchor point in your life. Sakshi, you are exactly that to me."</p>
+            <p>Thank you for the countless laughs, the unspoken understanding, and for being the absolute best listener and guide through everything. I am so deeply grateful to navigate life alongside a sister as brilliant, caring, and true as you.</p>
+            
+            <div class="ai-poem">
+                "Like a steady star in a silent sky,<br>
+                You make the dark landscapes beautiful and bright.<br>
+                More than a sister, a guardian of my smiles,<br>
+                Walking alongside me across the changing miles.<br>
+                May your special day sparkle just like you."
+            </div>
+            
+            <p class="tribute-tag">— Forever & Always Your Sibling</p>
+        </div>
+    </section>
+
+    <!-- 3. INTERACTIVE CAKE CUTTING -->
+    <section>
+        <h2 class="section-title">Make A Wish</h2>
+        <div class="cake-area">
+            <p style="color: var(--text-muted); letter-spacing: 1px;">Blow out the candle and celebrate your special day!</p>
+            <div class="cake" id="birthdayCake">
+                <div class="candle" id="cakeCandle">
+                    <div class="flame" id="candleFlame"></div>
+                </div>
+                <div class="cake-line"></div>
+            </div>
+            <button class="action-btn" id="cutCakeBtn">Cut Sakshi's Cake 🎂</button>
+        </div>
+    </section>
+
+    <!-- 4. WISHES FROM FRIENDS -->
+    <section>
+        <h2 class="section-title">Wishes From Friends</h2>
+        <div class="wishes-grid" id="wishesGrid">
+            <div class="wish-card">
+                <p class="wish-text">"Happy Birthday, Sakshi! May this wonderful new year bring you endless radiant laughter, bright breakthroughs, and sweet success. Keep shining bright!"</p>
+                <p class="wish-author">— Sital</p>
+            </div>
+            <div class="wish-card">
+                <p class="wish-text">"To the most incredible person, Happy Birthday! Never forget how much light and joy you bring into everyone's lives. May your day be as beautiful as your heart."</p>
+                <p class="wish-author">— Anshika</p>
+            </div>
+            <div class="wish-card">
+                <p class="wish-text">"Wishing you a magnificent year full of big dreams turned into reality, Sakshi! Enjoy your special day to the absolute fullest. We are all so lucky to celebrate you."</p>
+                <p class="wish-author">— Manu</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. THE MIDNIGHT SURPRISE -->
+    <section>
+        <div class="surprise-container">
+            <button class="action-btn" id="surpriseBtn" style="padding: 18px 40px;">Click For Surprise</button>
+            <div class="hidden-message" id="surpriseMessage">
+                <p>✨ Cheers to another wonderful year, Sakshi! ✨</p>
+                <p style="font-size: 1rem; color: var(--text-muted); margin-top: 10px;">Check your phone for your real gift message!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with love for Sakshi Bhadana's Birthday • 13 December</p>
+    </footer>
+
+    <!-- JavaScript Interaction Logic -->
+    <script>
+        const btn = document.getElementById('surpriseBtn');
+        const msg = document.getElementById('surpriseMessage');
+        const cakeBtn = document.getElementById('cutCakeBtn');
+        const cake = document.getElementById('birthdayCake');
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let confetti = [];
+        let animationFrame;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height - canvas.height;
+                this.size = Math.random() * 6 + 4;
+                this.speedX = Math.random() * 3 - 1.5;
+                this.speedY = Math.random() * 5 + 3;
+                const colors = ['#e5b09c', '#f7d6c8', '#d49b85', '#ffffff', '#222222'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.y > canvas.height) {
+                    this.y = -10;
+                    this.x = Math.random() * canvas.width;
+                }
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initConfetti() {
+            for (let i = 0; i < 150; i++) {
+                confetti.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            confetti.forEach(p => { p.update(); p.draw(); });
+            animationFrame = requestAnimationFrame(animate);
+        }
+
+        // Cake Cutting Feature Logic
+        cakeBtn.addEventListener('click', () => {
+            cake.classList.add('cut');
+            cakeBtn.innerText = "Cake Cut Successfully! 🎉";
+            initConfetti();
+            animate();
+            
+            if(window.AudioContext || window.webkitAudioContext) {
+                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const notes = [261.63, 261.63, 293.66, 261.63, 349.23, 329.63]; 
+                notes.forEach((freq, index) => {
+                    setTimeout(() => {
+                        let osc = audioCtx.createOscillator();
+                        let gain = audioCtx.createGain();
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                        gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+                        osc.connect(gain);
+                        gain.connect(audioCtx.destination);
+                        osc.start();
+                        osc.stop(audioCtx.currentTime + 0.5);
+                    }, index * 400);
+                });
+            }
+
+            setTimeout(() => { cancelAnimationFrame(animationFrame); ctx.clearRect(0, 0, canvas.width, canvas.height); }, 6000);
+        });
+
+        // Surprise Button Logic
+        btn.addEventListener('click', () => {
+            msg.style.display = 'block';
+            btn.innerText = "Enjoy Your Day! ✨";
+            initConfetti();
+            animate();
+            setTimeout(() => { cancelAnimationFrame(animationFrame); ctx.clearRect(0, 0, canvas.width, canvas.height); }, 6000);
+        });
+    </script>
+</body>
+</html>
